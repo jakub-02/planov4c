@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DailyPlanActivity">
+
+    <LinearLayout
+        android:id="@+id/dialyPlanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutDatum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            app:layout_constraintTop_toTopOf="@id/dialyPlanLayout">
+
+            <TextView
+                android:id="@+id/datum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:text="dnesny_datum"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tyzden"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="cislo_tyzden"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            app:layout_constraintTop_toTopOf="@id/layoutDatum">
+
+            <Button
+                android:id="@+id/pon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/ponT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutUto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/uto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="utorok"
+                app:layout_constraintTop_toBottomOf="@+id/pon"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/utoT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/str"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="streda"
+                app:layout_constraintTop_toBottomOf="@+id/uto"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/strT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutStv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/stv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="stvrtok"
+                app:layout_constraintTop_toBottomOf="@+id/str"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/stvT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/pia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="piatok"
+                app:layout_constraintTop_toBottomOf="@+id/stv"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/piaT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/sob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="sobota"
+                app:layout_constraintTop_toBottomOf="@+id/pia"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/sobT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutNed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/ned"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="nedela"
+                app:layout_constraintTop_toBottomOf="@+id/sob"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/nedT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:text="pondelok"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
