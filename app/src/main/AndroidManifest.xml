@@ -5,15 +5,21 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Time Manager"
+        android:label="Time Manager "
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planov4c">
         <activity
-            android:name=".SelectedDayActitvity"
+            android:name=".ZabavaActivity"
             android:exported="true" />
         <activity
-            android:name=".DailyPlanActivity"
+            android:name=".SkolaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RodinaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PracaActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
