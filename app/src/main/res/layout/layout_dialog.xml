@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:cardBackgroundColor="@color/main_light"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/fullscreen_dialog_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_close" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/fullscreen_dialog_close"
+                android:hint="Názov plánu"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fullscreen_dialog_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:text="PRIDAŤ"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/popisPriorita"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Vyberte si prioritu"/>
+
+            <RadioGroup
+                android:layout_below="@id/popisPriorita"
+                android:id="@+id/radioGroupPriorita"
+                android:checkedButton="@+id/buttonPriorita1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp">
+                <RadioButton
+                    android:id="@+id/buttonPriorita1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Priorita 1"/>
+                <RadioButton
+                    android:id="@+id/buttonPriorita2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Priorita 2"/>
+                <RadioButton
+                    android:id="@+id/buttonPriorita3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Priorita 3"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/popisOznamenie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroupPriorita"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Vyberte si oznamenie" />
+
+            <RadioGroup
+                android:layout_below="@id/popisOznamenie"
+                android:id="@+id/radioGroupOznamenie"
+                android:checkedButton="@+id/buttonDenne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp">
+
+                <RadioButton
+                    android:id="@+id/buttonDenne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Denne"/>
+                <RadioButton
+                    android:id="@+id/buttonTyzdenne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Týždenne"/>
+                <RadioButton
+                    android:id="@+id/buttonMesacne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Mesačne"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/popisKategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroupOznamenie"
+                android:padding="5dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Vyberte si kategoriu" />
+
+            <RadioGroup
+                android:id="@+id/kategorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/popisKategoria"
+                android:layout_marginHorizontal="5dp"
+                android:checkedButton="@+id/buttonPraca">
+
+                    <RadioButton
+                        android:id="@+id/buttonPraca"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Práca"/>
+                    <RadioButton
+                        android:id="@+id/buttonRodina"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Rodina"/>
+
+                    <RadioButton
+                        android:id="@+id/buttonSkola"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Škola"/>
+                    <RadioButton
+                        android:id="@+id/buttonZabava"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Zábava"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
