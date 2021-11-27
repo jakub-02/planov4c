@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planov4c">
         <activity
+            android:name=".AddNewPlanActitvity"
+            android:exported="true" />
+        <activity
             android:name=".ZabavaActivity"
             android:exported="true" />
         <activity

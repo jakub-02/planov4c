@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/fullscreen_dialog_close"
+                android:id="@+id/closeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -30,19 +30,18 @@
                 android:padding="8dp"
                 android:src="@drawable/ic_close" />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="8dp"
-                android:layout_toEndOf="@id/fullscreen_dialog_close"
-                android:hint="Názov plánu"
-                android:textColorHint="@color/white"
+                android:layout_toEndOf="@id/closeButton"
+                android:text="Vytvorte si nový plán"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/fullscreen_dialog_action"
+                android:id="@+id/addButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -67,8 +66,18 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/nazovPlanu"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="5dp"
+                android:hint="Zadajte názov plánu"
+                android:layout_width="match_parent">
+            </EditText>
+
             <TextView
                 android:id="@+id/popisPriorita"
+                android:layout_below="@+id/nazovPlanu"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:padding="5dp"
@@ -106,7 +115,7 @@
                 android:layout_below="@+id/radioGroupPriorita"
                 android:padding="5dp"
                 android:layout_marginHorizontal="5dp"
-                android:text="Vyberte si oznamenie" />
+                android:text="Vyberte si frekvenciu oznámení" />
 
             <RadioGroup
                 android:layout_below="@id/popisOznamenie"
@@ -140,37 +149,37 @@
                 android:layout_below="@+id/radioGroupOznamenie"
                 android:padding="5dp"
                 android:layout_marginHorizontal="5dp"
-                android:text="Vyberte si kategoriu" />
+                android:text="Vyberte si kategóriu" />
 
             <RadioGroup
-                android:id="@+id/kategorie"
+                android:id="@+id/radioGroupKategorie"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/popisKategoria"
                 android:layout_marginHorizontal="5dp"
                 android:checkedButton="@+id/buttonPraca">
 
-                    <RadioButton
-                        android:id="@+id/buttonPraca"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Práca"/>
-                    <RadioButton
-                        android:id="@+id/buttonRodina"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Rodina"/>
+                <RadioButton
+                    android:id="@+id/buttonPraca"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Práca"/>
+                <RadioButton
+                    android:id="@+id/buttonRodina"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Rodina"/>
 
-                    <RadioButton
-                        android:id="@+id/buttonSkola"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Škola"/>
-                    <RadioButton
-                        android:id="@+id/buttonZabava"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Zábava"/>
+                <RadioButton
+                    android:id="@+id/buttonSkola"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Škola"/>
+                <RadioButton
+                    android:id="@+id/buttonZdravie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Zdravie"/>
 
             </RadioGroup>
 
