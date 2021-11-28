@@ -15,7 +15,6 @@
         layout="@layout/toolbar" />
 
     <LinearLayout
-        android:id="@+id/pilire"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/purple_700"
@@ -23,10 +22,14 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/dailyPlan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/dailyplan">
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/dailyplan"
+            app:cardElevation="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,6 +38,10 @@
                 android:textSize="20sp"
                 android:padding="10dp"
                 android:fontFamily="@font/roboto_bold"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
                 android:textAlignment="center">
 
             </TextView>
@@ -42,10 +49,13 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/weeklyPlan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/weeklyplan">
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            app:cardBackgroundColor="@color/weeklyplan"
+            app:cardElevation="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,16 +64,23 @@
                 android:textSize="20sp"
                 android:padding="10dp"
                 android:fontFamily="@font/roboto_bold"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
                 android:textAlignment="center">
 
             </TextView>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/monthlyPlan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/monthlyplan">
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            app:cardBackgroundColor="@color/monthlyplan"
+            app:cardElevation="5dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,6 +89,10 @@
                 android:textSize="20sp"
                 android:padding="10dp"
                 android:fontFamily="@font/roboto_bold"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
                 android:textAlignment="center">
 
             </TextView>
@@ -84,10 +105,11 @@
             android:weightSum="2">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/zabava"
+                android:id="@+id/health"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/zabava_light"
                 app:cardElevation="5dp">
@@ -98,7 +120,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textZdravie"
+                        android:id="@+id/textHealth"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
@@ -115,19 +137,19 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:layout_below="@+id/textZdravie"
-                        android:src="@drawable/healthcare"
-                        android:layout_marginHorizontal="5dp"/>
+                        android:layout_below="@+id/textHealth"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="5dp"
+                        android:src="@drawable/healthcare" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/praca"
+                android:id="@+id/work"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/praca_light"
                 app:cardElevation="5dp">
@@ -138,24 +160,24 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textPraca"
-                        android:textAlignment="center"
-                        android:text="Práca"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/textWork"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
-                        android:textSize="30sp"
-                        android:textColor="#FFF"
                         android:shadowColor="#000000"
                         android:shadowDx="1.5"
                         android:shadowDy="1.3"
                         android:shadowRadius="1.6"
-                        android:textAllCaps="true"/>
+                        android:text="Work"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#FFF"
+                        android:textSize="30sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_below="@+id/textPraca"
+                        android:layout_below="@+id/textWork"
                         android:layout_centerInParent="true"
                         android:src="@drawable/work"
                         android:layout_marginHorizontal="5dp"/>
@@ -169,10 +191,11 @@
             android:layout_height="wrap_content"
             android:weightSum="2">
             <androidx.cardview.widget.CardView
-                android:id="@+id/rodina"
+                android:id="@+id/family"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/rodina_light"
                 app:cardElevation="5dp">
@@ -183,9 +206,9 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textRodina"
+                        android:id="@+id/textFamily"
                         android:textAlignment="center"
-                        android:text="Rodina"
+                        android:text="Family"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:fontFamily="@font/roboto_bold"
@@ -200,7 +223,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
-                        android:layout_below="@+id/textRodina"
+                        android:layout_below="@+id/textFamily"
                         android:layout_centerInParent="true"
                         android:src="@drawable/family"
                         android:layout_marginHorizontal="5dp"/>
@@ -208,10 +231,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/skola"
+                android:id="@+id/goal"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/skola_light"
                 app:cardElevation="5dp">
@@ -222,9 +246,9 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textSkola"
+                        android:id="@+id/textGoal"
                         android:textAlignment="center"
-                        android:text="Škola"
+                        android:text="Goal"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:fontFamily="@font/roboto_bold"
@@ -241,7 +265,7 @@
                         android:layout_height="150dp"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:layout_below="@+id/textSkola"
+                        android:layout_below="@+id/textGoal"
                         android:src="@drawable/school"
                         android:layout_marginHorizontal="5dp"/>
                 </RelativeLayout>
@@ -249,12 +273,14 @@
 
         </LinearLayout>
 
+        <!--
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerPlany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
         </androidx.recyclerview.widget.RecyclerView>
+        -->
 
     </LinearLayout>
 

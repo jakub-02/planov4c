@@ -54,9 +54,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         cv.put(COLUMN_CATEGORY, category);
         long result = db.insert(TABLE_NAME, null, cv);
         if (result == -1){
-            Toast.makeText(context, "Pridávanie plánu zlyhalo.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Plan creation failed.", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(context, "Plán bol vytvorený!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Plan was created!", Toast.LENGTH_SHORT).show();
         }
     }
 

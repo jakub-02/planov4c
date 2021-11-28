@@ -24,61 +24,91 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
-    CardView praca, rodina, skola, zabava;
+    CardView health, work, family, goal;
+    CardView dailyPlan, weeklyPlan, monthlyPlan;
 
+    /*
     MyDatabaseHelper myDH;
     ArrayList<String> plan_id, plan_title, plan_priority, plan_time, plan_category;
 
     RecyclerView recyclerPlany;
-    CustomAdapter customAdapter;
+    CustomAdapter customAdapter;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerPlany = findViewById(R.id.recyclerPlany);
+        /*recyclerPlany = findViewById(R.id.recyclerPlany);*/
         toolbar = findViewById(R.id.myToolbar);
 
-        praca = findViewById(R.id.praca);
-        rodina = findViewById(R.id.rodina);
-        skola = findViewById(R.id.skola);
-        zabava = findViewById(R.id.zabava);
+        health = findViewById(R.id.health);
+        work = findViewById(R.id.work);
+        family = findViewById(R.id.family);
+        goal = findViewById(R.id.goal);
+        dailyPlan = findViewById(R.id.dailyPlan);
+        weeklyPlan = findViewById(R.id.weeklyPlan);
+        monthlyPlan = findViewById(R.id.monthlyPlan);
 
         setSupportActionBar(toolbar);
 
-        praca.setOnClickListener(new View.OnClickListener() {
+        health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PracaActivity.class);
+                Intent intent = new Intent(MainActivity.this, HealthActivity.class);
                 startActivity(intent);
             }
         });
 
-        rodina.setOnClickListener(new View.OnClickListener() {
+        work.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RodinaActivity.class);
+                Intent intent = new Intent(MainActivity.this, WorkActivity.class);
                 startActivity(intent);
             }
         });
 
-        skola.setOnClickListener(new View.OnClickListener() {
+        family.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SkolaActivity.class);
+                Intent intent = new Intent(MainActivity.this, FamilyActivity.class);
                 startActivity(intent);
             }
         });
 
-        zabava.setOnClickListener(new View.OnClickListener() {
+        goal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SkolaActivity.class);
+                Intent intent = new Intent(MainActivity.this, GoalActivity.class);
                 startActivity(intent);
             }
         });
 
+        dailyPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DailyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        weeklyPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeeklyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        monthlyPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MonthlyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        /*
         myDH = new MyDatabaseHelper(MainActivity.this);
 
         plan_id = new ArrayList<>();
@@ -92,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         customAdapter = new CustomAdapter(MainActivity.this, this, plan_id, plan_title, plan_priority,
                 plan_time, plan_category);
         recyclerPlany.setAdapter(customAdapter);
-        recyclerPlany.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        recyclerPlany.setLayoutManager(new LinearLayoutManager(MainActivity.this));*/
 
     }
 
@@ -118,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*
     public void storeData(){
         Cursor cursor = myDH.readAllData();
         if (cursor.getCount() == 0){
@@ -131,6 +162,6 @@ public class MainActivity extends AppCompatActivity {
                 plan_category.add(cursor.getString(4));
             }
         }
-    }
+    }*/
 
 }

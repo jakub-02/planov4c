@@ -10,19 +10,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planov4c">
         <activity
+            android:name=".MonthlyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WeeklyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DailyActivity"
+            android:exported="true" />
+        <activity
             android:name=".AddNewPlanActitvity"
             android:exported="true" />
         <activity
-            android:name=".ZabavaActivity"
+            android:name=".HealthActivity"
             android:exported="true" />
         <activity
-            android:name=".SkolaActivity"
+            android:name=".GoalActivity"
             android:exported="true" />
         <activity
-            android:name=".RodinaActivity"
+            android:name=".FamilyActivity"
             android:exported="true" />
         <activity
-            android:name=".PracaActivity"
+            android:name=".WorkActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
