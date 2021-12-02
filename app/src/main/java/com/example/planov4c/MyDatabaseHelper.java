@@ -70,4 +70,88 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
+
+    Cursor selectDaily(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_time LIKE '%Daily'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectWeekly(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_time LIKE '%Weekly'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectMonthly(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_time LIKE '%Monthly'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectHealth(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_category LIKE '%Health'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectWork(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_category LIKE '%Work'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectFamily(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_category LIKE '%Family'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor selectGoal(){
+        String query = "SELECT * FROM " + TABLE_NAME +
+                " WHERE plan_category LIKE '%Goal'";
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if (db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 }
